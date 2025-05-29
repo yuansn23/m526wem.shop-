@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16691196399"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16691196399');
+</script>
+<!-- Event snippet for 1 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16691196399/l_uXCKeixc8aEO_j_ZY-',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+	<!-- Event snippet for 1 conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16691196399/l_uXCKeixc8aEO_j_ZY-',
+      'transaction_id': ''
+  });
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>AI株価分析ツール</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+    <div class="stars-container" id="stars"></div>
+    <div class="grid-overlay"></div>
+    
+    <header class="header">
+        <div class="container">
+            <h1 class="logo" id="logoText"></h1>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title" id="heroTitle"></h1>
+                <p class="hero-subtitle" id="heroSubtitle"></p>
+                
+                <div class="input-section">
+                    <h2 class="input-title" id="inputTitle"></h2>
+                    <div class="input-group">
+                        <input type="text" class="stock-input" id="stockCode" placeholder="">
+                    </div>
+                    <button class="analyze-btn" id="analyzeBtn"></button>
+                </div>
+                
+                <img src="img/1.jpg" alt="AI株価分析" class="hero-image">
+            </div>
+        </div>
+    </section>
+    
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title" id="featuresTitle"></h2>
+            
+            <div class="features-grid" id="featuresGrid">
+                <!-- Features will be inserted by JS -->
+            </div>
+        </div>
+    </section>
+    
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title" id="benefitsTitle"></h2>
+            
+            <div class="benefit-text" id="benefitText">
+                <!-- Benefits text will be inserted by JS -->
+            </div>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="cta-btn" id="ctaButton" onclick="opensite2()"></button>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="disclaimer">
+                <h3 class="disclaimer-title" id="disclaimerTitle"></h3>
+                <div id="disclaimerText">
+                    <!-- Disclaimer text will be inserted by JS -->
+                </div>
+            </div>
+            
+            <p class="copyright" id="copyrightText"></p>
+        </div>
+    </footer>
+    
+    <!-- Modal -->
+    <div class="modal" id="analysisModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            
+            <div id="processingView">
+                <h3 id="processingTitle"></h3>
+                <div class="progress-container">
+                    <div class="progress-circle">
+                        <div class="progress-inner">
+                            <span id="progressPercent">0%</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="processing-text" id="processingText"></p>
+                <p class="status-text" id="statusText"></p>
+            </div>
+            
+            <div id="completionView" style="display: none;">
+                <h3 class="completion-message" id="completionTitle"></h3>
+                <p class="completion-subtitle" id="completionSubtitle"></p>
+                <button class="line-btn" onclick="opensite2()" id="lineButton"></button>
+            </div>
+        </div>
+    </div>
+    <script>
+	
+	// Function to open LINE
+function opensite2() {
+	gtag_report_conversion();
+    window.open('https://line.me/R/ti/p/@123456', '_blank');
+}</script>
+
+    <script src="2.js"></script>
+</body>
+</html>
