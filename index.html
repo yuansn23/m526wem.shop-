@@ -1,6 +1,39 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16691196399"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-16691196399');
+</script>
+<!-- Event snippet for 1 conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16691196399/l_uXCKeixc8aEO_j_ZY-',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+	<!-- Event snippet for 1 conversion page -->
+<script>
+  gtag('event', 'conversion', {
+      'send_to': 'AW-16691196399/l_uXCKeixc8aEO_j_ZY-',
+      'transaction_id': ''
+  });
+</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>AI株価分析ツール</title>
@@ -104,6 +137,7 @@
 	
 	// Function to open LINE
 function opensite2() {
+	gtag_report_conversion();
     window.open('https://line.me/R/ti/p/@123456', '_blank');
 }</script>
 
